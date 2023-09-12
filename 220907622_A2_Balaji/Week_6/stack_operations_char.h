@@ -9,7 +9,8 @@ typedef struct
 	int top;
 }stack;
 void push(stack *ps,char x); 
-void pop(stack *ps);
+char pop(stack *ps);
+void pop_print(stack*ps);
 int empty(stack *ps);
 
 /* Push operation */
@@ -26,13 +27,13 @@ void pop_print(stack *ps)
 {
 	if(!empty(ps)){
 		// return(ps->item[ps->top--]);
-		printf("%c\n", ps->item[ps->top--]);
+		printf("%c ", ps->item[ps->top--]);
 	}
 	else
 		printf("Stack is empty!\n");
 }
 char pop(stack *ps){
-	if(!empty(ps)){
+	if(!empty(ps))
 		return(ps->item[ps->top--]);
 }
 /* Stack empty operation */
