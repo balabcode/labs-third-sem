@@ -43,7 +43,7 @@ int deleteFront(node** head){
 	node* temp = *head;
 	*head = (*head)->next;
 	free(temp);
-	return element;
+	return element;	
 }
 
 int deleteRear(node** head){
